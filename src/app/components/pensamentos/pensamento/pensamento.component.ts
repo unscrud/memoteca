@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class PensamentoComponent {
 
+  pensamento = {
+    conteudo: '"O segredo do sucesso está em começar a fazer o que é necessário, depois fazer o que é possível e, de repente, você estará fazendo o impossível."',
+    autoria: 'São Francisco de Assis',
+    modelo: 'modelo3'
+  }
+
 }
