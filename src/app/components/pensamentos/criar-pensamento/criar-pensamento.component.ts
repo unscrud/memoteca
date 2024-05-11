@@ -27,6 +27,6 @@ export class CriarPensamentoComponent {
   }
 
   cancelar(){
-    console.log("cancelando")
+    this.router.navigate(['/listarPensamento'])
   }
 }
