@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pensamento } from '../pensamento/pensamento';
+import { PensamentoService } from '../../../services/pensamento.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-editar-pensamentos',
@@ -14,7 +16,11 @@ export class EditarPensamentosComponent implements OnInit {
     modelo: ''
   }
 
-  constructor (){}
+  constructor (
+    private service: PensamentoService,
+    private router: Router,
+    private route: ActivatedRoute
+  ){}
 
   ngOnInit(): void {
 
