@@ -11,11 +11,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 
 export class CriarPensamentoComponent implements OnInit {
-  pensamento: Pensamento = {
-    conteudo: '',
-    autoria: '',
-    modelo: ''
-  }
 
   formulario!: FormGroup;
 
