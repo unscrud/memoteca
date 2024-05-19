@@ -29,7 +29,7 @@ export class CriarPensamentoComponent implements OnInit {
   }
 
   criarPensamento(){
-    this.service.criar(this.pensamento).subscribe(()=>{
+    this.service.criar(this.formulario.value).subscribe(()=>{
       this.router.navigate(['/listarPensamento'])
     })
   }
