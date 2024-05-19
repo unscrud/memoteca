@@ -24,4 +24,4 @@ EXPOSE 3000
 CMD ["npm", "start"]
 
 # Para realizar o build --> docker build -t memoteca .
-# Para executar -->
+# Para executar --> docker run -p 4200:4200 -p 3000:3000 memoteca
