@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-botao-carregar-mais',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './botao-carregar-mais.component.css'
 })
 export class BotaoCarregarMaisComponent {
+
+  @Input() haMaisPensamentos: boolean = false;
 
 }
