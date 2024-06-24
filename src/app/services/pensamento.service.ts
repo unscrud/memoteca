@@ -24,19 +24,15 @@ export class PensamentoService {
 
   listar(pagina: number): Observable<Pensamento[]> {
     const itensPorPagina = 6;
-    const url = `${this.API}?_page=${pagina}&_per_page=${itensPorPagina}`;
 
-    //let params = new HttpParams()
-    //.set('_page', pagina)
-    //.set('_per_page', itensPorPagina);
+    let params = new HttpParams()
+      .set('_page', pagina.toString())
+      .set('_per_page', itensPorPagina.toString());
 
     const pensamentos: Observable<Pensamento[]> = this.http
-      .get<PensamentoResponse>(url)
-      .pipe(map(response => response.data));
+      .get<PensamentoResponse>(this.API, { params })
+      .pipe(map((response) => response.data));
 
-    console.log(pensamentos)
-
-    //return this.http.get<Pensamento[]>(this.API, { params });
     return pensamentos;
   }
 
