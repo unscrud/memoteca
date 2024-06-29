@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pensamento } from '../pensamento/pensamento';
 import { PensamentoService } from '../../../services/pensamento.service';
+import { PensamentoResponse } from '../../../interfaces/pensamento-response';
 
 @Component({
   selector: 'app-listar-pensamento',
@@ -16,7 +17,7 @@ export class ListarPensamentoComponent implements OnInit {
   constructor(private service: PensamentoService) {}
 
   ngOnInit(): void {
-    this.service.listar(this.paginaAtual).subscribe((response) => {
+    this.service.listar(this.paginaAtual).subscribe((response: PensamentoResponse) => {
       this.listaPensamentos = response.data;
       this.totalItems = response.items
     });
@@ -24,7 +25,7 @@ export class ListarPensamentoComponent implements OnInit {
 
   carregarMaisPensamentos() {
     this.service.listar(++this.paginaAtual)
-      .subscribe(response => {
+      .subscribe((response : PensamentoResponse) => {
         this.listaPensamentos.push(...response.data);
         console.log(this.listaPensamentos.length);
         if(this.listaPensamentos.length >= response.items) {

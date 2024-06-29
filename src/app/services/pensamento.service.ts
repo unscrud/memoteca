@@ -2,16 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Pensamento } from '../components/pensamentos/pensamento/pensamento';
 import { Observable } from 'rxjs';
-
-interface PensamentoResponse {
-  first: number;
-  prev: number;
-  next: number;
-  last: number;
-  pages: number;
-  items: number;
-  data: Pensamento[];
-}
+import { PensamentoResponse } from '../interfaces/pensamento-response';
 
 @Injectable({
   providedIn: 'root',
