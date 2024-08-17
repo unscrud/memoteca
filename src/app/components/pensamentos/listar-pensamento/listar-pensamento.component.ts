@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Pensamento } from '../pensamento/pensamento';
 import { PensamentoService } from '../../../services/pensamento.service';
-import { PensamentoResponse } from '../../../interfaces/pensamento-response';
 
 @Component({
   selector: 'app-listar-pensamento',
@@ -13,24 +12,39 @@ export class ListarPensamentoComponent implements OnInit {
   paginaAtual: number = 1;
   totalItems: number = 0
   haMaisPensamentos: boolean = true;
+  filtro: string = '';
 
   constructor(private service: PensamentoService) {}
 
   ngOnInit(): void {
-    this.service.listar(this.paginaAtual).subscribe((response: PensamentoResponse) => {
-      this.listaPensamentos = response.data;
-      this.totalItems = response.items
-    });
+    this.service
+      .listar(this.paginaAtual, this.filtro)
+      .subscribe((pensamentos: Pensamento[]) => {
+          this.listaPensamentos = pensamentos;
+          this.totalItems = pensamentos.length
+      });
   }
 
   carregarMaisPensamentos() {
-    this.service.listar(++this.paginaAtual)
-      .subscribe((response : PensamentoResponse) => {
-        this.listaPensamentos.push(...response.data);
+    this.service
+      .listar(++this.paginaAtual, this.filtro)
+      .subscribe((pensamentos: Pensamento[]) => {
+        this.listaPensamentos.push(...pensamentos);
         console.log(this.listaPensamentos.length);
-        if(this.listaPensamentos.length >= response.items) {
+        if (this.listaPensamentos.length >= pensamentos.length) {
           this.haMaisPensamentos = false;
         }
       });
   }
+
+  pesquisarPensamentos(){
+    this.paginaAtual = 1;
+    this.haMaisPensamentos = true;
+    this.service
+      .listar(this.paginaAtual, this.filtro)
+      .subscribe((pensamentos: Pensamento[]) => {
+        this.listaPensamentos = pensamentos;
+      });
+  }
+
 }
