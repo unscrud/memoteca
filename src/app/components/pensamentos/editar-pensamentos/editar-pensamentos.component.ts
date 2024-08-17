@@ -16,7 +16,8 @@ export class EditarPensamentosComponent implements OnInit {
     id: [''],
     conteudo: [''],
     autoria: [''],
-    modelo: ['']
+    modelo: [''],
+    favorito: [false]
   });
 
   constructor(
@@ -47,6 +48,7 @@ export class EditarPensamentosComponent implements OnInit {
           ]),
         ],
         modelo: [pensamento.modelo],
+        favorito: [pensamento.favorito]
       });
     });
   }
