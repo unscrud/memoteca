@@ -10,7 +10,7 @@ import { PensamentoService } from '../../../services/pensamento.service';
 export class ListarPensamentoComponent implements OnInit {
   listaPensamentos: Pensamento[] = [];
   paginaAtual: number = 1;
-  totalItems: number = 0
+  totalItems: number = 0;
   haMaisPensamentos: boolean = true;
   filtro: string = '';
 
@@ -20,8 +20,8 @@ export class ListarPensamentoComponent implements OnInit {
     this.service
       .listar(this.paginaAtual, this.filtro)
       .subscribe((pensamentos: Pensamento[]) => {
-          this.listaPensamentos = pensamentos;
-          this.totalItems = pensamentos.length
+        this.listaPensamentos = pensamentos;
+        this.totalItems = pensamentos.length;
       });
   }
 
@@ -47,4 +47,13 @@ export class ListarPensamentoComponent implements OnInit {
       });
   }
 
+  listarFavoritos(){
+    this.paginaAtual = 1;
+    this.haMaisPensamentos = true;
+    this.service
+      .listarPensamentosFavoritos(this.paginaAtual, this.filtro)
+      .subscribe((pensamentosFavoritos: Pensamento[]) => {
+        this.listaPensamentos = pensamentosFavoritos;
+      });
+  }
 }
