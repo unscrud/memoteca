@@ -14,7 +14,7 @@ export class ListarPensamentoComponent implements OnInit {
   haMaisPensamentos: boolean = true;
   filtro: string = '';
   favoritos: boolean = false;
-  listaFavoritos : Pensamento[] = [];
+  listaFavoritos: Pensamento[] = [];
 
   constructor(private service: PensamentoService) {}
 
@@ -39,7 +39,7 @@ export class ListarPensamentoComponent implements OnInit {
       });
   }
 
-  pesquisarPensamentos(){
+  pesquisarPensamentos() {
     this.paginaAtual = 1;
     this.haMaisPensamentos = true;
     this.service
@@ -49,7 +49,11 @@ export class ListarPensamentoComponent implements OnInit {
       });
   }
 
-  listarFavoritos(){
+  recarregarComponente() {
+    location.reload();
+  }
+
+  listarFavoritos() {
     this.favoritos = true;
     this.paginaAtual = 1;
     this.haMaisPensamentos = true;
