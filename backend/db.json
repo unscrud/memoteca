@@ -5,7 +5,7 @@
       "conteudo": "Passo informações para o componente filho",
       "autoria": "Componente pai",
       "modelo": "modelo3",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "2",
@@ -54,7 +54,7 @@
       "conteudo": "Data binding is easy in Angular",
       "autoria": "Instrutor",
       "modelo": "modelo3",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "9",
@@ -68,7 +68,7 @@
       "conteudo": "A utilização de directives é essencial",
       "autoria": "Desenvolvedor",
       "modelo": "modelo3",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "11",
@@ -82,7 +82,7 @@
       "conteudo": "Modules help in organizing code",
       "autoria": "Desenvolvedor",
       "modelo": "modelo1",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "13",
@@ -117,7 +117,7 @@
       "conteudo": "Resolvers fetch data before route activation",
       "autoria": "Documentação",
       "modelo": "modelo3",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "18",
@@ -138,14 +138,14 @@
       "conteudo": "Angular Material oferece UI components",
       "autoria": "Especialista",
       "modelo": "modelo3",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "21",
       "conteudo": "RxJS permite programação reativa",
       "autoria": "Desenvolvedor",
       "modelo": "modelo1",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "22",
@@ -194,7 +194,7 @@
       "conteudo": "Use HttpClient para requisições HTTP",
       "autoria": "Documentação",
       "modelo": "modelo2",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "29",
@@ -222,7 +222,7 @@
       "conteudo": "Use decorators para definir metadata",
       "autoria": "Documentação",
       "modelo": "modelo3",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "33",
@@ -285,7 +285,7 @@
       "conteudo": "HostListener escuta eventos do host",
       "autoria": "Documentação",
       "modelo": "modelo3",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "42",
@@ -313,7 +313,7 @@
       "conteudo": "ChangeDetectionStrategy otimiza a detecção de mudanças",
       "autoria": "Especialista",
       "modelo": "modelo1",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "46",
@@ -334,7 +334,7 @@
       "conteudo": "Use async pipe para observables",
       "autoria": "Documentação",
       "modelo": "modelo1",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "49",
@@ -348,7 +348,7 @@
       "conteudo": "CLI templates agilizam a criação de projetos",
       "autoria": "Desenvolvedor",
       "modelo": "modelo3",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "51",
@@ -362,14 +362,14 @@
       "conteudo": "Use Angular Elements para componentes web",
       "autoria": "Especialista",
       "modelo": "modelo2",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "53",
       "conteudo": "Ivy é o novo compilador do Angular",
       "autoria": "Documentação",
       "modelo": "modelo3",
-      "favorito": false
+      "favorito": true
     }
   ]
 }
